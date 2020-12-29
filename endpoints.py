@@ -3,6 +3,7 @@
 #this file gets imported by djserver
 import djhelpers as dj
 
+print ("ENDPOINTS.PY")
 HOST="mongodb://127.0.0.1:27017"
 DB="local"
 dj.mongo_set(HOST, DB)
