@@ -1,10 +1,8 @@
-import time
 #copy as endpoints.py to folder above:
 #cp example_endpoints.py ../endpoints.py
 #this file gets imported by djserver
 import djhelpers as dj
 
-print (">>>>>>>>>>>>>>>>>>>>>>>> ENDPOINTS.PY")
 HOST="mongodb://127.0.0.1:27017"
 DB="local"
 dj.mongo_set(HOST, DB)
@@ -29,7 +27,6 @@ def pages_test():
 # Create endpoint /version
 #
 def example_version():
-    time.sleep(5)
     return dj.json({'version': "0.0.001"})
 
 #
