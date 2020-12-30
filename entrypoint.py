@@ -1,10 +1,12 @@
-import os
+import os, time
 print ("test djangle")
 os.system("apachectl start")
 print("~~~~~~~~~~~~~~~~~~~~~~~~LOG~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 os.system("cat /var/log/apache2/error.log")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-os.system("curl -s http://localhost/example/version &")
+for i in range (10):
+    os.system("curl -s http://localhost/example/version &")
+    time.sleep(.01)
 os.system("curl -s http://localhost/example/version")
 print()
 print("~~~~~~~~~~~~~~~~~~~~~~~~LOG~~~~~~~~~~~~~~~~~~~~~~~~~~~")
