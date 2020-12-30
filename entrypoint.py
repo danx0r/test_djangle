@@ -1,12 +1,14 @@
 import os, time
 print ("test djangle")
+os.system("cp mpm_event.conf /etc/apache2/mods-available/")
+os.system("cp mpm_worker.conf /etc/apache2/mods-available/")
 os.system("a2dismod mpm_event")
 os.system("a2enmod mpm_worker")
 os.system("apachectl start")
 print("~~~~~~~~~~~~~~~~~~~~~~~~LOG~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 os.system("cat /var/log/apache2/error.log")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-for i in range (5):
+for i in range (24):
     os.system("curl -s http://localhost/example/version &")
     time.sleep(.01)
 # os.system("curl -s http://localhost/example/version")
