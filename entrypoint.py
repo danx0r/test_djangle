@@ -1,6 +1,12 @@
 import os
 print ("test djangle")
 os.system("apachectl start")
+print("~~~~~~~~~~~~~~~~~~~~~~~~LOG~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+os.system("cat /var/log/apache2/error.log")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 os.system("curl -s http://localhost/example/version")
 print()
+print("~~~~~~~~~~~~~~~~~~~~~~~~LOG~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+os.system("cat /var/log/apache2/error.log")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 os.system("bash")
