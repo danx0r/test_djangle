@@ -4,4 +4,4 @@
 #exceptions (These will be sent to the docker daemon for building):
 !/Dockerfile*
 !requirements.txt
-
+!000-default.conf
